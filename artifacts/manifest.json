@@ -1,8 +1,10 @@
 {
   "action_ref": "3a8b0736b88af42b32160233fb54d9dc85bef257537d83fd604225e765d2401b",
+  "anchor_block": 50244420,
   "anchor_chain": "Base mainnet (chainId 8453)",
   "anchor_ref_bytes32": "0x3a8b0736b88af42b32160233fb54d9dc85bef257537d83fd604225e765d2401b",
   "anchor_registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
+  "anchor_tx_hash": "0xe2bfa15967f57fdd3a7689143cc2435c624a1d6fa61e573cfaa9979bf4a635eb",
   "envelope": {
     "action_name": "retry_http_request_with_x402",
     "action_ref": "3a8b0736b88af42b32160233fb54d9dc85bef257537d83fd604225e765d2401b",
