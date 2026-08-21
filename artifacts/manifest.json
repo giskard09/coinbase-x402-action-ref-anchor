@@ -1,0 +1,59 @@
+{
+  "action_ref": "3a8b0736b88af42b32160233fb54d9dc85bef257537d83fd604225e765d2401b",
+  "anchor_chain": "Base mainnet (chainId 8453)",
+  "anchor_ref_bytes32": "0x3a8b0736b88af42b32160233fb54d9dc85bef257537d83fd604225e765d2401b",
+  "anchor_registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
+  "envelope": {
+    "action_name": "retry_http_request_with_x402",
+    "action_ref": "3a8b0736b88af42b32160233fb54d9dc85bef257537d83fd604225e765d2401b",
+    "generated_at_utc": "2026-08-20T22:00:00.000Z",
+    "hash_algo": "sha256",
+    "packet_version": "1.0",
+    "preimage": {
+      "action_type": "agentkit.x402.retry_http_request_with_x402",
+      "agent_id": "worked-example.coinbase-x402-action-ref-anchor",
+      "scope": "base:usdc:pay-and-fetch",
+      "timestamp": "2026-08-20T22:00:00.000Z"
+    },
+    "preimage_format": "jcs-rfc8785-v1",
+    "provider": "X402ActionProvider (coinbase/agentkit)",
+    "request_digest": "7c2ba203995635e562819e374145078e40ec014db90e6edafa2a072d6a3d790d",
+    "result_digest": "5bbffd3976ac45cda7c95f2fa67f94a5f0550763ba1d6161da0f150d6f2b0b49"
+  },
+  "fixture_id": "coinbase-x402-retry-worked-example",
+  "jcs_payload": "{\"action_type\":\"agentkit.x402.retry_http_request_with_x402\",\"agent_id\":\"worked-example.coinbase-x402-action-ref-anchor\",\"scope\":\"base:usdc:pay-and-fetch\",\"timestamp\":\"2026-08-20T22:00:00.000Z\"}",
+  "preimage": {
+    "action_type": "agentkit.x402.retry_http_request_with_x402",
+    "agent_id": "worked-example.coinbase-x402-action-ref-anchor",
+    "scope": "base:usdc:pay-and-fetch",
+    "timestamp": "2026-08-20T22:00:00.000Z"
+  },
+  "provenance": "Synthetic worked example. Tool-call shape modeled on coinbase/agentkit's own public source (typescript/agentkit/src/action-providers/x402/x402ActionProvider.ts, retryWithX402 / retry_http_request_with_x402 action). NOT captured from a running AgentKit instance, a real wallet, or a real x402 payment. result.details.paymentProof.transaction is not a real transaction. No claim that AgentKit emits action_ref today, and no claim of integration, adoption, or endorsement by Coinbase.",
+  "related_work": "coinbase/agentkit#1170 (giskard09, opened 2026-05-07, still open) adds a read-only MyceliumTrails action provider to AgentKit itself (verify_trail/compute_action_ref/get_trails) for verifying agent trails generically. This worked example is a separate, narrower piece: a standalone, independently-reproducible anchor of one specific action (X402ActionProvider.retryWithX402's payment dispatch) \u2014 same pattern as the Binance/OKX/Kraken worked examples published the same day, not a duplicate of #1170.",
+  "request": {
+    "method": "GET",
+    "selectedPaymentOption": {
+      "amount": "0.05",
+      "asset": "USDC",
+      "network": "base"
+    },
+    "url": "https://api.example.com/premium-data"
+  },
+  "result": {
+    "details": {
+      "paymentProof": {
+        "network": "base",
+        "payer": "0x3333333333333333333333333333333333333333",
+        "success": true,
+        "transaction": "0x2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      "paymentUsed": {
+        "amount": "0.05",
+        "asset": "USDC",
+        "network": "base"
+      }
+    },
+    "status": "success"
+  },
+  "spec": "action-ref-v1 (argentum-core, docs/spec/action-ref.md)"
+}
